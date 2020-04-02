@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     table.increments();
 
     table.string("name").notNullable();
-    table.integer("surname").notNullable();
+    table.string("surname").notNullable();
     table.string("email");
 
   
@@ -11,5 +11,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable("patients");
+  return knex.schema.dropTable("users");
 };

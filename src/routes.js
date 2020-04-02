@@ -1,13 +1,15 @@
 const express = require("express");
 
-const EmployeesController = require("./controllers/EmployeesController");
-const PatientsController = require("./controllers/PatientsController");
+const UsersController = require("./controllers/UsersController");
+
 
 const routes = express.Router();
 
-//Rotas de criação e listagem dos Funcionarios
-routes.post("/users", EmployeesController.store);
-routes.get("/users", EmployeesController.index);
+//Rotas 
+
+routes.post("/users", UsersController.store);
+routes.get("/users", UsersController.index);
+
 
 
 
